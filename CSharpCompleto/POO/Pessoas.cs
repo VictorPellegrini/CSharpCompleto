@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace POO
+namespace POO40
 {
     class Pessoas
     {

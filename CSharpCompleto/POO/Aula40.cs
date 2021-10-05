@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace POO
+namespace POO40
 {
     class Aula40
     {
