@@ -6,21 +6,31 @@
         public int Quantidade;
         public double Preco;
 
-        public double Valor_Em_Estoque()
+        public double ValorEmEstoque()
         {
             return Preco * Quantidade;
         }
 
-        public int Add_Produto()
+        public void AddProduto(int adicionado)
         {
-            Quantidade = Quantidade + Adicionado;
-            return Quantidade;
+            Quantidade = Quantidade + adicionado;
         }
 
-        public int Remove_Produto()
+        public void RemoveProduto(int removido)
         {
-            Quantidade = Quantidade - Removido;
-            return Quantidade;
+            Quantidade = Quantidade - removido;            
+        }
+
+        public override string ToString()
+        {
+            return "Nome: "
+                + Nome
+                + ". Valor unitário: R$"
+                + Preco.ToString("F2")
+                + ". Quantidade: "
+                + Quantidade
+                + " unidades. Valor total em estoque: R$"
+                + ValorEmEstoque().ToString("F2");
         }
     }
 }
