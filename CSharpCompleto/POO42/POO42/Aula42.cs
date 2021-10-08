@@ -6,15 +6,15 @@ namespace POO42
     {
         static void Main(string[] args)
         {
-            Produto p1 = new Produto();
-
             Console.WriteLine("Entre com os dados do produto:");
             Console.WriteLine("Nome:");
-            p1.Nome = Console.ReadLine();
+            string nome = Console.ReadLine();
             Console.WriteLine("Preço:");
-            p1.Preco = double.Parse(Console.ReadLine());
+            double preco = double.Parse(Console.ReadLine());
             Console.WriteLine("Quantidade:");
-            p1.Quantidade = int.Parse(Console.ReadLine());
+            int quantidade = int.Parse(Console.ReadLine());
+
+            Produto p1 = new Produto(nome, preco, quantidade);
 
             Console.WriteLine("Dados atualizados: " + p1);
 

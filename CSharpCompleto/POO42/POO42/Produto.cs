@@ -6,6 +6,13 @@
         public int Quantidade;
         public double Preco;
 
+        public Produto(string nome, double preco, int quantidade)
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
+        }
+
         public double ValorEmEstoque()
         {
             return Preco * Quantidade;
