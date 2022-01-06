@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO40", "POO40\POO40.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO42", "POO42\POO42\POO42.csproj", "{EA527D57-9428-44C4-94C0-E739786D8BF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Static 48", "Static 48\Static 48.csproj", "{38459B2F-1B0F-43FC-8052-4AE6D05B1C19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Static 48", "Static 48\Static 48.csproj", "{38459B2F-1B0F-43FC-8052-4AE6D05B1C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercícioDeFixacao60", "ExercícioDeFixacao60\ExercícioDeFixacao60.csproj", "{F3043EC4-7E2B-45D2-AFD8-BD9350567C08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{38459B2F-1B0F-43FC-8052-4AE6D05B1C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38459B2F-1B0F-43FC-8052-4AE6D05B1C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38459B2F-1B0F-43FC-8052-4AE6D05B1C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3043EC4-7E2B-45D2-AFD8-BD9350567C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3043EC4-7E2B-45D2-AFD8-BD9350567C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3043EC4-7E2B-45D2-AFD8-BD9350567C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3043EC4-7E2B-45D2-AFD8-BD9350567C08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

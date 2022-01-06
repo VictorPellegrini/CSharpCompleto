@@ -2,7 +2,7 @@
 
 namespace Static_48
 {
-    class Program
+    class CasaDeCambio
     {
         static void Main(string[] args)
         {
