@@ -9,18 +9,18 @@ namespace ExercícioDeFixacao60
             ContaBancaria Conta;
 
             Console.WriteLine("Informe:");
-            Console.Write(" - Número da conta:");
+            Console.Write(" - Número da conta: ");
             var contaIdInserido = int.Parse(Console.ReadLine());
 
-            Console.Write(" - Nome do titular da conta:");
+            Console.Write(" - Nome do titular da conta: ");
             var nome = Console.ReadLine();
 
-            Console.Write("\r\n - Haverá depósito inicial? (s/n)");
+            Console.Write("\r\n - Haverá depósito inicial (s/n)? ");
             char option = char.Parse(Console.ReadLine());
 
             if (option == 's' || option == 'S')
             {
-                Console.Write(" - Depósito inicial:");
+                Console.Write(" - Depósito inicial: ");
                 double valorInicial = double.Parse(Console.ReadLine());
                 Conta = new ContaBancaria(contaIdInserido, nome, valorInicial);
             }
