@@ -6,35 +6,35 @@ namespace ExercícioDeFixacao60
     {
         static void Main(string[] args)
         {
-            Conta usuario = new Conta();
+            ContaBancaria Conta;
 
             Console.WriteLine("Informe:");
-            Console.WriteLine(" - Número da conta:");
+            Console.Write(" - Número da conta:");
             var contaIdInserido = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(" - Nome do titular da conta:");
+            Console.Write(" - Nome do titular da conta:");
             var nome = Console.ReadLine();
 
-            Console.WriteLine(" - Haverá depósito inicial? (s/n)");
+            Console.Write("\r\n - Haverá depósito inicial? (s/n)");
             char option = char.Parse(Console.ReadLine());
 
-            if (option == 's')
+            if (option == 's' || option == 'S')
             {
-                Console.WriteLine(" - Depósito inicial:");
+                Console.Write(" - Depósito inicial:");
                 double valorInicial = double.Parse(Console.ReadLine());
-                usuario = new Conta(contaIdInserido, nome, valorInicial);
+                Conta = new ContaBancaria(contaIdInserido, nome, valorInicial);
             }
             else
-                usuario = new Conta(contaIdInserido, nome);
+                Conta = new ContaBancaria(contaIdInserido, nome);
                 
 
             //deposito
-            usuario.Depositar();
-            usuario.DadosAtualizados(usuario);
+            Conta.Depositar();
+            Console.WriteLine(Conta);
 
             //saque            
-            usuario.Sacar();
-            usuario.DadosAtualizados(usuario);
+            Conta.Sacar();
+            Console.WriteLine(Conta);
         }        
     }
 }
