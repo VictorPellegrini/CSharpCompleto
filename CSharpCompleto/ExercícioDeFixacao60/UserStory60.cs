@@ -2,7 +2,7 @@
 
 namespace ExercícioDeFixacao60
 {
-    class UserStory
+    class UserStory60
     {
         static void Main(string[] args)
         {
