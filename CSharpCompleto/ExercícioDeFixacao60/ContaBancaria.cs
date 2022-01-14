@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ExercícioDeFixacao60
 {
     public class ContaBancaria
     {
         public int ContaId { get; private set; }
-        public string Titular { get; private set; }        
+        public string Titular { get; private set; }
         public double Saldo { get; private set; }
 
         public ContaBancaria(int contaId, string titular)
@@ -19,7 +17,7 @@ namespace ExercícioDeFixacao60
         }
 
         public ContaBancaria(int contaId, string titular, double valorInicial) : this(contaId, titular)
-        {            
+        {
             Saldo = valorInicial;
             Console.WriteLine("\r\nDados da conta:");
             Console.WriteLine("Conta: " + ContaId + ", Titular: " + Titular + ", Saldo: $ " + Saldo.ToString("F2") + ".");
@@ -42,6 +40,6 @@ namespace ExercícioDeFixacao60
             Console.Write("\r\nDigite um valor para saque:");
             double saque = double.Parse(Console.ReadLine());
             Saldo = Saldo - (saque + 5);
-        }        
+        }
     }
 }
