@@ -30,6 +30,7 @@ namespace ExercicioResolvido80
             for (int i = 0; i < p; i++)
             {
                 string[] lineValues = Console.ReadLine().Split(" ");
+
                 for (int j = 0; j < p; j++)
                 {
                     matrix[i, j] = int.Parse(lineValues[j]);
