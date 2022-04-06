@@ -1,4 +1,4 @@
-﻿namespace Static_48
+﻿namespace Section0448_MembrosEstaticos
 {
     class ConversorDeMoeda
     {

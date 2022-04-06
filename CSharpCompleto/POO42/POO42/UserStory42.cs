@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace POO42
+namespace Section0442_POO
 {
-    class Aula42
+    class UserStory42
     {
         static void Main(string[] args)
         {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ExercicioDeFixacao78
+namespace Section0678_Listas
 {
     public class UserStory78
     {
@@ -39,7 +39,7 @@ namespace ExercicioDeFixacao78
                 double percent = double.Parse(Console.ReadLine());
 
                 employeesList.Find(x => x.Id == idSalaryIncrease).SalaryIncrease(percent);
-            } 
+            }
             else
                 Console.WriteLine("This employee does not exist");
 

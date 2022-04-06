@@ -3,25 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO40", "POO40\POO40.csproj", "{A0358A84-20C8-4988-A8DA-A4919846FBE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section0440_POO", "POO40\Section0440_POO.csproj", "{A0358A84-20C8-4988-A8DA-A4919846FBE2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO42", "POO42\POO42\POO42.csproj", "{EA527D57-9428-44C4-94C0-E739786D8BF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section0442_POO", "POO42\POO42\Section0442_POO.csproj", "{EA527D57-9428-44C4-94C0-E739786D8BF8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Static 48", "Static 48\Static 48.csproj", "{38459B2F-1B0F-43FC-8052-4AE6D05B1C19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section0448_MembrosEstaticos", "Static 48\Section0448_MembrosEstaticos.csproj", "{38459B2F-1B0F-43FC-8052-4AE6D05B1C19}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercícioDeFixacao60", "ExercícioDeFixacao60\ExercícioDeFixacao60.csproj", "{F3043EC4-7E2B-45D2-AFD8-BD9350567C08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section0560_ConstrutoresThisSobrecargaEncapsulamento", "ExercícioDeFixacao60\Section0560_ConstrutoresThisSobrecargaEncapsulamento.csproj", "{F3043EC4-7E2B-45D2-AFD8-BD9350567C08}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioDeFixacao71", "ExercicioDeFixacao71\ExercicioDeFixacao71.csproj", "{D94D0A50-7400-4B8E-9690-CA8C129ABED2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section0671_Vetores", "ExercicioDeFixacao71\Section0671_Vetores.csproj", "{D94D0A50-7400-4B8E-9690-CA8C129ABED2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioDeFixacao78", "ExercicioDeFixacao78\ExercicioDeFixacao78.csproj", "{1A7C4F60-824A-4D8D-B090-E882AD6EBB8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section0678_Listas", "ExercicioDeFixacao78\Section0678_Listas.csproj", "{1A7C4F60-824A-4D8D-B090-E882AD6EBB8F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioResolvido80", "ExercicioResolvido80\ExercicioResolvido80.csproj", "{74EF150F-084C-4885-8DDE-A71E2F299809}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section0680_Matrizes", "ExercicioResolvido80\Section0680_Matrizes.csproj", "{74EF150F-084C-4885-8DDE-A71E2F299809}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioDeFixacao81_Matrizes", "ExercicioDeFixacao81_Matrizes\ExercicioDeFixacao81_Matrizes.csproj", "{65A75E51-208A-48EF-BFF2-9C3E70887B64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section0681_Matrizes", "ExercicioDeFixacao81_Matrizes\Section0681_Matrizes.csproj", "{65A75E51-208A-48EF-BFF2-9C3E70887B64}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioDeFixacao132_EnumeracaoComposicao", "ExercicioDeFixacao132_EnumeracaoComposicao\ExercicioDeFixacao132_EnumeracaoComposicao.csproj", "{5B6F0F07-F51F-4B13-B730-BC9F6ED7CC8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section09132_EnumeracaoComposicao", "ExercicioDeFixacao132_EnumeracaoComposicao\Section09132_EnumeracaoComposicao.csproj", "{5B6F0F07-F51F-4B13-B730-BC9F6ED7CC8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioDeFixacao142_HerancaPolimorfismo", "ExercicioDeFixacao142_HerancaPolimorfismo\ExercicioDeFixacao142_HerancaPolimorfismo.csproj", "{62FA30A0-8E65-462C-917A-3673AD128948}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section10142_HerancaPolimorfismo", "ExercicioDeFixacao142_HerancaPolimorfismo\Section10142_HerancaPolimorfismo.csproj", "{62FA30A0-8E65-462C-917A-3673AD128948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section10146_Abstracao", "ExercicioDeFixacao146_Abstracao\Section10146_Abstracao.csproj", "{28A81342-1CAF-430D-ACA3-B2EFED85EF61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{62FA30A0-8E65-462C-917A-3673AD128948}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62FA30A0-8E65-462C-917A-3673AD128948}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62FA30A0-8E65-462C-917A-3673AD128948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A81342-1CAF-430D-ACA3-B2EFED85EF61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A81342-1CAF-430D-ACA3-B2EFED85EF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A81342-1CAF-430D-ACA3-B2EFED85EF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A81342-1CAF-430D-ACA3-B2EFED85EF61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

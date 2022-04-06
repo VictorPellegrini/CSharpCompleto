@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExercicioResolvido80
+namespace Section0680_Matrizes
 {
     public class UserStory80
     {

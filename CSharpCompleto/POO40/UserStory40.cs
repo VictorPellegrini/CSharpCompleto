@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace POO40
+namespace Section0440_POO
 {
-    class Aula40
+    class UserStory40
     {
         /*
         1. Fazer um programa para ler os dados de duas pessoas, depois mostrar o nome da pessoa mais

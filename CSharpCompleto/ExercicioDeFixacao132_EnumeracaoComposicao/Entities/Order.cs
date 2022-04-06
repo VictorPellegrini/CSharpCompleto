@@ -1,10 +1,10 @@
-﻿using ExercicioDeFixacao132_EnumeracaoComposicao.Entities.Enums;
+﻿using Section09132_EnumeracaoComposicao.Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace ExercicioDeFixacao132_EnumeracaoComposicao.Entities
+namespace Section09132_EnumeracaoComposicao.Entities
 {
     public class Order
     {

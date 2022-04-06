@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExercicioDeFixacao132_EnumeracaoComposicao.Entities
+namespace Section09132_EnumeracaoComposicao.Entities
 {
     public class Client
     {

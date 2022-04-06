@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExercicioDeFixacao71
+namespace Section0671_Vetores
 {
     public class UserStory71
     {

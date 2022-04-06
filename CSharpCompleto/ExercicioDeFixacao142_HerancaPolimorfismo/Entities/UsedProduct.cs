@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExercicioDeFixacao142_HerancaPolimorfismo.Entities
+namespace Section10142_HerancaPolimorfismo.Entities
 {
     public class UsedProduct : Product
     {

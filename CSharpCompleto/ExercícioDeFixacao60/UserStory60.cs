@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExercícioDeFixacao60
+namespace Section0560_ConstrutoresThisSobrecargaEncapsulamento
 {
     class UserStory60
     {

@@ -1,10 +1,10 @@
-﻿using ExercicioDeFixacao132_EnumeracaoComposicao.Entities;
-using ExercicioDeFixacao132_EnumeracaoComposicao.Entities.Enums;
+﻿using Section09132_EnumeracaoComposicao.Entities;
+using Section09132_EnumeracaoComposicao.Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace ExercicioDeFixacao132_EnumeracaoComposicao
+namespace Section09132_EnumeracaoComposicao
 {
     public class UserStory132
     {

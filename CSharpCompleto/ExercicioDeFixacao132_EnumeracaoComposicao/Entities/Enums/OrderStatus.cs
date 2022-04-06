@@ -1,4 +1,4 @@
-﻿namespace ExercicioDeFixacao132_EnumeracaoComposicao.Entities.Enums
+﻿namespace Section09132_EnumeracaoComposicao.Entities.Enums
 {
     public enum OrderStatus : int
     {

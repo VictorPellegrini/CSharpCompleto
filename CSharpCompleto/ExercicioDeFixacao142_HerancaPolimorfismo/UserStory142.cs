@@ -1,9 +1,9 @@
-﻿using ExercicioDeFixacao142_HerancaPolimorfismo.Entities;
+﻿using Section10142_HerancaPolimorfismo.Entities;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace ExercicioDeFixacao142_HerancaPolimorfismo
+namespace Section10142_HerancaPolimorfismo
 {
     public class UserStory142
     {

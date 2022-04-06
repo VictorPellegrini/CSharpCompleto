@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExercicioDeFixacao81_Matrizes
+namespace Section0681_Matrizes
 {
     public class UserStory81
     {
