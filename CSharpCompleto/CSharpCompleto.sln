@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioResolvido80", "Exe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioDeFixacao81_Matrizes", "ExercicioDeFixacao81_Matrizes\ExercicioDeFixacao81_Matrizes.csproj", "{65A75E51-208A-48EF-BFF2-9C3E70887B64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioDeFixacao132_EnumeracaoComposicao", "ExercicioDeFixacao132_EnumeracaoComposicao\ExercicioDeFixacao132_EnumeracaoComposicao.csproj", "{5B6F0F07-F51F-4B13-B730-BC9F6ED7CC8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioDeFixacao132_EnumeracaoComposicao", "ExercicioDeFixacao132_EnumeracaoComposicao\ExercicioDeFixacao132_EnumeracaoComposicao.csproj", "{5B6F0F07-F51F-4B13-B730-BC9F6ED7CC8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioDeFixacao142_HerancaPolimorfismo", "ExercicioDeFixacao142_HerancaPolimorfismo\ExercicioDeFixacao142_HerancaPolimorfismo.csproj", "{62FA30A0-8E65-462C-917A-3673AD128948}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{5B6F0F07-F51F-4B13-B730-BC9F6ED7CC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B6F0F07-F51F-4B13-B730-BC9F6ED7CC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B6F0F07-F51F-4B13-B730-BC9F6ED7CC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62FA30A0-8E65-462C-917A-3673AD128948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FA30A0-8E65-462C-917A-3673AD128948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FA30A0-8E65-462C-917A-3673AD128948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FA30A0-8E65-462C-917A-3673AD128948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
