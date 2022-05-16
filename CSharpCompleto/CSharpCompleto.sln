@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section10146_Abstracao", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section11155_Exceptions", "Section11155_Exceptions\Section11155_Exceptions.csproj", "{E8C7647B-83A6-45C0-9BB4-6896D2739DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section13201_Arquivos", "Section13201_Arquivos\Section13201_Arquivos.csproj", "{B3C88EBB-B350-4B7D-8A05-CF95FE2FD5B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section13201_Arquivos", "Section13201_Arquivos\Section13201_Arquivos.csproj", "{B3C88EBB-B350-4B7D-8A05-CF95FE2FD5B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section14208_Interfaces", "Section14208_Interfaces\Section14208_Interfaces.csproj", "{806B7965-133A-4554-84A5-152AA08C1C0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{B3C88EBB-B350-4B7D-8A05-CF95FE2FD5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3C88EBB-B350-4B7D-8A05-CF95FE2FD5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3C88EBB-B350-4B7D-8A05-CF95FE2FD5B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{806B7965-133A-4554-84A5-152AA08C1C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{806B7965-133A-4554-84A5-152AA08C1C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{806B7965-133A-4554-84A5-152AA08C1C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{806B7965-133A-4554-84A5-152AA08C1C0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
