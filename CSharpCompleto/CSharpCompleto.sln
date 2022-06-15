@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section13201_Arquivos", "Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section14208_Interfaces", "Section14208_Interfaces\Section14208_Interfaces.csproj", "{806B7965-133A-4554-84A5-152AA08C1C0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section15221_GenericsSetDisctionary", "Section15221_GenericsSetDisctionary\Section15221_GenericsSetDisctionary.csproj", "{23CE149E-EE7F-4118-AB23-DA56950E603B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section15221_GenericsSetDictionary", "Section15221_GenericsSetDictionary\Section15221_GenericsSetDictionary.csproj", "{23CE149E-EE7F-4118-AB23-DA56950E603B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section15223_GenericsSetDictionary", "Section15223_GenericsSetDictionary\Section15223_GenericsSetDictionary.csproj", "{CBEE374D-4502-47B6-A2C7-25C8CB954501}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{23CE149E-EE7F-4118-AB23-DA56950E603B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23CE149E-EE7F-4118-AB23-DA56950E603B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23CE149E-EE7F-4118-AB23-DA56950E603B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBEE374D-4502-47B6-A2C7-25C8CB954501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEE374D-4502-47B6-A2C7-25C8CB954501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEE374D-4502-47B6-A2C7-25C8CB954501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEE374D-4502-47B6-A2C7-25C8CB954501}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
