@@ -1,11 +1,11 @@
 ﻿namespace Section15221_GenericsSetDisctionary.Entities
 {
-    public class User
+    public class Users
     {
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public User(int id)
+        public Users(int id)
         {
             Id = id;
         }
@@ -17,11 +17,12 @@
 
         public override bool Equals(object obj)
         {
-            if(!(obj is User))
+            if(!(obj is Users))
             {
                 return false;
             }
-            User other = obj as User;
+
+            Users other = obj as Users;
             return Id.Equals(other.Id);
         }
     }

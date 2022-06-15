@@ -11,7 +11,7 @@ namespace Section15221_GenericsSetDisctionary
         {
             Console.WriteLine("Hey Alex!");
 
-            HashSet<User> listStudents = new HashSet<User>();
+            HashSet<Students> listStudents = new HashSet<Students>();
 
             listStudents = InterfaceService.InsertStudents('A', listStudents);
             listStudents = InterfaceService.InsertStudents('B', listStudents);

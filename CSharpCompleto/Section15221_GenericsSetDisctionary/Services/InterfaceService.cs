@@ -6,7 +6,7 @@ namespace Section15221_GenericsSetDisctionary.Services
 {
     public static class InterfaceService
     {
-        public static HashSet<User> InsertStudents(char course, HashSet<User> listStudents)
+        public static HashSet<Students> InsertStudents(char course, HashSet<Students> listStudents)
         {
             Console.Write($"\nHow many students for course {course}? ");
             int quantity = int.Parse(Console.ReadLine());
@@ -16,7 +16,7 @@ namespace Section15221_GenericsSetDisctionary.Services
                 Console.Write($"Id student {i}: ");
                 int id = int.Parse(Console.ReadLine());
 
-                listStudents.Add(new User(id));
+                listStudents.Add(new Students(id));
             }
 
             return listStudents;
