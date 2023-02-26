@@ -1,4 +1,4 @@
-﻿namespace Section12_Chess.board
+﻿namespace Section12_Chess.GameBoard
 {
     public enum Color
     {

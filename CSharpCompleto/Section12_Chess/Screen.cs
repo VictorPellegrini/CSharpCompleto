@@ -1,11 +1,11 @@
-﻿using Section12_Chess.board;
+﻿using Section12_Chess.GameBoard;
 using System;
 
 namespace Section12_Chess
 {
     public class Screen
     {
-        public static void printBoard(Board board)
+        public static void PrintBoard(Board board)
         {
             for (int i = 0; i < board.lines; i++)
             {

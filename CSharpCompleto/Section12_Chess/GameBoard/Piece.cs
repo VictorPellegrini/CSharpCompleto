@@ -1,4 +1,4 @@
-﻿namespace Section12_Chess.board
+﻿namespace Section12_Chess.GameBoard
 {
     public class Piece
     {
@@ -7,9 +7,9 @@
         public Color color { get; protected set; }
         public int amountOfMoves { get; protected set; }
 
-        public Piece(Position position, Board board, Color color)
+        public Piece(Board board, Color color)
         {
-            this.position = position;
+            this.position = null;
             this.board = board;
             this.color = color;
             amountOfMoves = 0;
