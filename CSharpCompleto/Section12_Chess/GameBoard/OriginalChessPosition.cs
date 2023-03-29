@@ -1,13 +1,11 @@
-﻿using Section12_Chess.GameBoard;
-
-namespace Section12_Chess.Pieces
+﻿namespace Section12_Chess.GameBoard
 {
-    public class ChessPosition
+    public class OriginalChessPosition
     {
-        public char Column { get; set; }
         public int Row { get; set; }
+        public char Column { get; set; }
 
-        public ChessPosition(char column, int row)
+        public OriginalChessPosition(char column, int row)
         {
             Column = column;
             Row = row;

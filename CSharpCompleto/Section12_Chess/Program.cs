@@ -16,6 +16,13 @@ namespace Section12_Chess
 
                 board.PutPiece(new King(board, Color.black), new Position(0, 4));
                 board.PutPiece(new Queen(board, Color.black), new Position(0, 3));
+                board.PutPiece(new Bishop(board, Color.black), new Position(0, 5));
+                board.PutPiece(new Bishop(board, Color.black), new Position(0, 2));
+                
+                board.PutPiece(new King(board, Color.white), new Position(7, 3));
+                board.PutPiece(new Queen(board, Color.white), new Position(7, 4));
+                board.PutPiece(new Bishop(board, Color.white), new Position(7, 5));
+                board.PutPiece(new Bishop(board, Color.white), new Position(7, 2));
 
                 Screen.PrintBoard(board);
             }

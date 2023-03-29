@@ -20,7 +20,7 @@
 
         public Piece GetPiece(Position position)
         {
-            return pieces[position.Line, position.Column];
+            return pieces[position.Row, position.Column];
         }
 
         public void PutPiece(Piece piece, Position position)
@@ -30,13 +30,13 @@
                 throw new BoardExceptions("A piece already exists in this position");
             }
 
-            pieces[position.Line, position.Column] = piece;
+            pieces[position.Row, position.Column] = piece;
             piece.position = position;
         }
 
         public bool PositionValidate(Position position)
         {
-            if (position.Line < 0 || position.Column < 0 || position.Line > lines || position.Column > columns)
+            if (position.Row < 0 || position.Column < 0 || position.Row > lines || position.Column > columns)
             {
                 throw new BoardExceptions("Invalid position");
             }
