@@ -2,25 +2,25 @@
 {
     public class Board
     {
-        private Piece[,] pieces;
-        public int lines { get; set; }
-        public int columns { get; set; }
+        private Piece[,] Pieces;
+        public int Rows { get; set; }
+        public int Columns { get; set; }
 
-        public Board(int lines, int columns)
+        public Board(int rows, int columns)
         {
-            this.lines = lines;
-            this.columns = columns;
-            pieces = new Piece[lines, columns];
+            this.Rows = rows;
+            this.Columns = columns;
+            Pieces = new Piece[rows, columns];
         }
 
-        public Piece GetPiece(int line, int column)
+        public Piece GetPiece(int row, int column)
         {
-            return pieces[line, column];
+            return Pieces[row, column];
         }
 
         public Piece GetPiece(Position position)
         {
-            return pieces[position.Row, position.Column];
+            return Pieces[position.Row, position.Column];
         }
 
         public void PutPiece(Piece piece, Position position)
@@ -30,13 +30,28 @@
                 throw new BoardExceptions("A piece already exists in this position");
             }
 
-            pieces[position.Row, position.Column] = piece;
-            piece.position = position;
+            Pieces[position.Row, position.Column] = piece;
+            piece.Position = position;
+        }
+
+        public Piece RemovePiece(Position position)
+        {
+            if (GetPiece(position) == null)
+            {
+                return null;
+            }
+            
+            Pieces[position.Row, position.Column] = null;
+
+            Piece pieceToRemove =  GetPiece(position);
+            pieceToRemove.Position = null;
+
+            return pieceToRemove;
         }
 
         public bool PositionValidate(Position position)
         {
-            if (position.Row < 0 || position.Column < 0 || position.Row > lines || position.Column > columns)
+            if (position.Row < 0 || position.Column < 0 || position.Row > Rows || position.Column > Columns)
             {
                 throw new BoardExceptions("Invalid position");
             }

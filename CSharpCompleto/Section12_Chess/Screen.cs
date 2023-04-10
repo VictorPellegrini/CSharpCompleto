@@ -7,10 +7,10 @@ namespace Section12_Chess
     {
         public static void PrintBoard(Board board)
         {
-            for (int i = 0; i < board.lines; i++)
+            for (int i = 0; i < board.Rows; i++)
             {
                 Console.Write(8 - i + " ");
-                for (int j = 0; j < board.columns; j++)
+                for (int j = 0; j < board.Columns; j++)
                 {
                     if (board.GetPiece(i, j) == null)
                     {
@@ -29,7 +29,7 @@ namespace Section12_Chess
 
         public static void PrintPiece(Piece piece)
         {
-            if (piece.color == Color.white)
+            if (piece.Color == Color.white)
             {
                 Console.Write(piece);
             }

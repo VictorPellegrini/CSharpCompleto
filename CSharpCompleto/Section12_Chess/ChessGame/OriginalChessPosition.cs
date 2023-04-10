@@ -1,4 +1,6 @@
-﻿namespace Section12_Chess.GameBoard
+﻿using Section12_Chess.GameBoard;
+
+namespace Section12_Chess.ChessGame
 {
     public class OriginalChessPosition
     {
