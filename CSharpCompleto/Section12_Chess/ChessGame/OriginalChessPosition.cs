@@ -13,7 +13,7 @@ namespace Section12_Chess.ChessGame
             Row = row;
         }
 
-        public Position toPosition()
+        public Position ToPosition()
         {
             return new Position(8 - Row, Column - 'a');
         }

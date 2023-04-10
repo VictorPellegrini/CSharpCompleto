@@ -39,12 +39,11 @@
             if (GetPiece(position) == null)
             {
                 return null;
-            }
-            
-            Pieces[position.Row, position.Column] = null;
+            }            
 
             Piece pieceToRemove =  GetPiece(position);
             pieceToRemove.Position = null;
+            Pieces[position.Row, position.Column] = null;
 
             return pieceToRemove;
         }

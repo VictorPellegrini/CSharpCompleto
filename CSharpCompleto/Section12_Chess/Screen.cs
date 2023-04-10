@@ -1,4 +1,5 @@
-﻿using Section12_Chess.GameBoard;
+﻿using Section12_Chess.ChessGame;
+using Section12_Chess.GameBoard;
 using System;
 
 namespace Section12_Chess
@@ -40,6 +41,15 @@ namespace Section12_Chess
                 Console.Write(piece);
                 Console.ForegroundColor = consoleColor;
             }
+        }
+
+        public static OriginalChessPosition ReadPosition()
+        {
+            string chessMove = Console.ReadLine();
+            char column = chessMove[0];
+            int row = int.Parse(chessMove[1]+"");
+
+            return new OriginalChessPosition(column, row);
         }
     }
 }

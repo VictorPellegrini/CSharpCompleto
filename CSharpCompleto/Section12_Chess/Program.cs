@@ -1,6 +1,5 @@
 ﻿using Section12_Chess.ChessGame;
 using Section12_Chess.GameBoard;
-using Section12_Chess.Pieces;
 using System;
 
 namespace Section12_Chess
@@ -15,7 +14,19 @@ namespace Section12_Chess
             {
                 ChessMatch chessMatch = new ChessMatch();
 
-                Screen.PrintBoard(chessMatch.Board);
+                while (!chessMatch.Finished)
+                {
+                    Console.Clear();
+                    Screen.PrintBoard(chessMatch.Board);
+
+                    Console.Write("\nInsert the position of the piece to move: ");
+                    Position PiecePositionToMove = Screen.ReadPosition().ToPosition();
+
+                    Console.Write("\nInsert the destination position of this piece: ");
+                    Position DestinationPosition = Screen.ReadPosition().ToPosition();
+
+                    chessMatch.movePiece(PiecePositionToMove, DestinationPosition);
+                }
             }
             catch (BoardExceptions ex)
             {
