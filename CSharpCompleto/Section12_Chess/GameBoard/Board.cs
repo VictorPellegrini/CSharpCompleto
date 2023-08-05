@@ -48,19 +48,27 @@
             return pieceToRemove;
         }
 
-        public bool PositionValidate(Position position)
+        public bool CheckIfPositionHasPiece(Position position)
         {
-            if (position.Row < 0 || position.Column < 0 || position.Row > Rows || position.Column > Columns)
+            ValidatePositionAlert(position);
+            return GetPiece(position) != null;
+        }
+
+        public bool ValidatePosition(Position position)
+        {
+            if (position.Row < 0 || position.Column < 0 || position.Row >= Rows || position.Column >= Columns)
             {
-                throw new BoardExceptions("Invalid position");
+                return false;
             }
             return true;
         }
 
-        public bool CheckIfPositionHasPiece(Position position)
+        public void ValidatePositionAlert(Position position)
         {
-            PositionValidate(position);
-            return GetPiece(position) != null;
+            if (!ValidatePosition(position))
+            {
+                throw new BoardExceptions("Invalid position");
+            }
         }
     }
 }

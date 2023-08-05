@@ -8,6 +8,10 @@ namespace Section12_Chess.Pieces
         {
         }
 
+        public override bool[,] PossibleMovements()
+        {
+            throw new System.NotImplementedException();
+        }
         public override string ToString()
         {
             return "Q";

@@ -19,13 +19,18 @@ namespace Section12_Chess
                     Console.Clear();
                     Screen.PrintBoard(chessMatch.Board);
 
-                    Console.Write("\nInsert the position of the piece to move: ");
-                    Position PiecePositionToMove = Screen.ReadPosition().ToPosition();
+                    Console.Write("\nInsert the position of the piece to move (column and line): ");
+                    Position piecePositionToMove = Screen.ReadPosition().ToPosition();
 
-                    Console.Write("\nInsert the destination position of this piece: ");
-                    Position DestinationPosition = Screen.ReadPosition().ToPosition();
+                    bool[,] possibleMovements = chessMatch.Board.GetPiece(piecePositionToMove).PossibleMovements();
 
-                    chessMatch.movePiece(PiecePositionToMove, DestinationPosition);
+                    Console.Clear();
+                    Screen.PrintBoard(chessMatch.Board, possibleMovements);
+
+                    Console.Write("\nInsert the destination position of this piece (column and line): ");
+                    Position destinationPosition = Screen.ReadPosition().ToPosition();
+
+                    chessMatch.movePiece(piecePositionToMove, destinationPosition);
                 }
             }
             catch (BoardExceptions ex)

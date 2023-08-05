@@ -1,6 +1,6 @@
 ﻿namespace Section12_Chess.GameBoard
 {
-    public class Piece
+    public abstract class Piece
     {
         public Position Position { get; set; }
         public Board Board { get; protected set; }
@@ -19,5 +19,7 @@
         {
             AmountOfMoves++;
         }
+
+        public abstract bool[,] PossibleMovements();
     }
 }
