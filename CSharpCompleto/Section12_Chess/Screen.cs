@@ -6,6 +6,15 @@ namespace Section12_Chess
 {
     public static class Screen
     {
+        public static void PrintCapturedPieces(ChessMatch chessMatch)
+        {
+            Console.WriteLine("\nCaptured pieces:");
+            Console.Write("Whites -> ");
+            PrintCapturedPieces(chessMatch, Color.White);
+            Console.Write("\nBlacks -> ");
+            PrintCapturedPieces(chessMatch, Color.Black);
+        }
+
         public static void PrintBoard(Board board)
         {
             for (int i = 0; i < board.Rows; i++)
@@ -50,10 +59,21 @@ namespace Section12_Chess
         public static OriginalChessPosition ReadPosition()
         {
             string chessMove = Console.ReadLine();
+
             char column = chessMove[0];
-            int row = int.Parse(chessMove[1]+"");
+            int.TryParse(chessMove[1] + "", out int row);
 
             return new OriginalChessPosition(column, row);
+        }
+
+        private static void PrintCapturedPieces(ChessMatch chessMatch, Color color)
+        {
+            var pieces = chessMatch.GetCapturedPieces(color);
+            
+            foreach (var piece in pieces)
+            {
+                Console.Write(piece.ToString() + " ");
+            }
         }
 
         private static void PrintPiece(Piece piece)
@@ -64,7 +84,7 @@ namespace Section12_Chess
             }
             else
             {
-                if (piece.Color == Color.white)
+                if (piece.Color == Color.White)
                 {
                     Console.Write(piece);
                 }

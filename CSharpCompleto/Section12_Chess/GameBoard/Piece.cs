@@ -20,6 +20,29 @@
             AmountOfMoves++;
         }
 
+        public bool CheckIfPieceIsBlocked()
+        {
+            bool[,] mat = PossibleMovements();
+
+            for (int i = 0; i < Board.Rows; i++)
+            {
+                for (int j = 0; j < Board.Columns; j++)
+                {
+                    if (mat[i, j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool ValidateDestinyPosition(Position destinyPosition)
+        {
+            return PossibleMovements()[destinyPosition.Row, destinyPosition.Column];
+        }
+
         public abstract bool[,] PossibleMovements();
+
     }
 }
