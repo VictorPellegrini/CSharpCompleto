@@ -9,10 +9,15 @@ namespace Section12_Chess
         public static void PrintCapturedPieces(ChessMatch chessMatch)
         {
             Console.WriteLine("\nCaptured pieces:");
+            
             Console.Write("Whites -> ");
             PrintCapturedPieces(chessMatch, Color.White);
+
             Console.Write("\nBlacks -> ");
+            ConsoleColor consoleColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             PrintCapturedPieces(chessMatch, Color.Black);
+            Console.ForegroundColor = consoleColor;
         }
 
         public static void PrintBoard(Board board)
