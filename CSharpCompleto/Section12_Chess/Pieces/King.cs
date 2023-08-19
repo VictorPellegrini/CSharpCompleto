@@ -77,11 +77,5 @@ namespace Section12_Chess.Pieces
         {
             return "K";
         }
-
-        private bool canMoveOn(Position position)
-        {
-            Piece piece = Board.GetPiece(position);
-            return piece == null || piece.Color != this.Color;
-        }
     }
 }

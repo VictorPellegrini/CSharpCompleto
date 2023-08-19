@@ -42,12 +42,18 @@
             return false;
         }
 
-        public bool ValidateDestinyPosition(Position destinyPosition)
-        {
-            return PossibleMovements()[destinyPosition.Row, destinyPosition.Column];
-        }
+        //public bool ValidateDestinyPosition(Position destinyPosition)
+        //{
+        //    return PossibleMovements()[destinyPosition.Row, destinyPosition.Column];
+        //}
 
         public abstract bool[,] PossibleMovements();
+
+        protected bool canMoveOn(Position position)
+        {
+            Piece piece = Board.GetPiece(position);
+            return piece == null || piece.Color != Color;
+        }
 
     }
 }
