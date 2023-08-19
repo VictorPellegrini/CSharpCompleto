@@ -15,7 +15,12 @@
             AmountOfMoves = 0;
         }
 
-        public void AddMoves()
+        public void RemoveMovement()
+        {
+            AmountOfMoves--;
+        }
+
+        public void AddMovement()
         {
             AmountOfMoves++;
         }

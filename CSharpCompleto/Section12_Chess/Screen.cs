@@ -6,10 +6,27 @@ namespace Section12_Chess
 {
     public static class Screen
     {
+        public static void PrintChessMatch(ChessMatch chessMatch)
+        {
+            PrintBoard(chessMatch.Board);
+            PrintCapturedPieces(chessMatch);
+            Console.WriteLine("\n\nRound: " + chessMatch.Round + ". - " + chessMatch.CurrentPlayer + " player's turn.");
+
+            if (chessMatch.Check)
+            {
+                ConsoleColor consoleColor = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\n -- CHECK! --");
+                Console.ForegroundColor = consoleColor;
+            }
+
+            Console.Write("\nInsert the position of the piece to move (column and line): ");
+        }
+
         public static void PrintCapturedPieces(ChessMatch chessMatch)
         {
             Console.WriteLine("\nCaptured pieces:");
-            
+
             Console.Write("Whites -> ");
             PrintCapturedPieces(chessMatch, Color.White);
 
@@ -74,7 +91,7 @@ namespace Section12_Chess
         private static void PrintCapturedPieces(ChessMatch chessMatch, Color color)
         {
             var pieces = chessMatch.GetCapturedPieces(color);
-            
+
             foreach (var piece in pieces)
             {
                 Console.Write(piece.ToString() + " ");

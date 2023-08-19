@@ -20,10 +20,8 @@ namespace Section12_Chess
                     try
                     {
                         Console.Clear();
-                        Screen.PrintBoard(chessMatch.Board);
-                        Screen.PrintCapturedPieces(chessMatch);
-                        Console.WriteLine("\n\nRound: " + chessMatch.Round + ". - " + chessMatch.CurrentPlayer + " player's turn.");
-                        Console.Write("\nInsert the position of the piece to move (column and line): ");
+                        Screen.PrintChessMatch(chessMatch);
+                        
                         Position origin = Screen.ReadPosition().ToPosition();
 
                         chessMatch.ValidateOriginPosition(origin);

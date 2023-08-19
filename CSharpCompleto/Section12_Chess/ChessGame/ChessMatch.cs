@@ -2,6 +2,8 @@
 using Section12_Chess.Pieces;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Reflection.PortableExecutable;
 
 namespace Section12_Chess.ChessGame
 {
@@ -11,6 +13,7 @@ namespace Section12_Chess.ChessGame
         public Color CurrentPlayer { get; private set; }
         public int Round { get; private set; }
         public bool Finished { get; private set; }
+        public bool Check { get; private set; }
         private HashSet<Piece> _pieces;
         private static HashSet<Piece> _capturedPieces;
 
@@ -20,14 +23,31 @@ namespace Section12_Chess.ChessGame
             Round = 1;
             CurrentPlayer = Color.White;
             Finished = false;
+            Check = false;
             _pieces = new HashSet<Piece>();
             _capturedPieces = new HashSet<Piece>();
             PutPieces();
         }
 
-        public void PerformsTheMove(Position origin, Position destinty)
+        public void PerformsTheMove(Position origin, Position destiny)
         {
-            MovePiece(origin, destinty);
+            Piece pecaCapturada = MovePiece(origin, destiny);
+
+            if (IsKingInCheck(CurrentPlayer))
+            {
+                UndoTheMove(origin, destiny, pecaCapturada);
+                throw new BoardExceptions("You can not put your King in check position!");
+            }
+
+            if (IsKingInCheck(GetAgainstPlayer(CurrentPlayer)))
+            {
+                Check = true;
+            }
+            else
+            {
+                Check = false;
+            }
+
             Round++;
             ChangePlayer();
         }
@@ -69,19 +89,67 @@ namespace Section12_Chess.ChessGame
         }
 
         public IList<Piece> GetCapturedPieces(Color color)
-            => _capturedPieces.Where(x => x.Color == color).ToList();
+            => _capturedPieces.Where(piece => piece.Color == color).ToList();
 
-        private void MovePiece(Position origin, Position destiny)
+        public IList<Piece> GetSurvivingPieces(Color color)
+            => _pieces.Where(piece => piece.Color == color).ToList();
+
+        public bool IsKingInCheck(Color color)
+        {
+            Piece king = GetKing(color);
+            
+            if (king == null)
+            {
+                throw new BoardExceptions("The King " + color + " is already dead!");
+            }
+
+            var enemyPieces = GetSurvivingPieces(GetAgainstPlayer(color));
+
+            foreach (Piece piece in enemyPieces)
+            {
+                bool[,] possibleMovements = piece.PossibleMovements();
+                if (possibleMovements[king.Position.Row, king.Position.Column])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private static Color GetAgainstPlayer(Color color)
+            => color == Color.White ? Color.Black : Color.White;
+
+        private Piece GetKing(Color color)
+            => GetSurvivingPieces(color).First(piece => piece is King);
+
+        private Piece MovePiece(Position origin, Position destiny)
         {
             Piece piece = Board.RemovePiece(origin);
-            piece.AddMoves();
+            piece.AddMovement();
             Piece capturedPiece = Board.RemovePiece(destiny);
-            Board.PutPiece(piece, destiny);
 
             if (capturedPiece != null)
             {
                 _capturedPieces.Add(capturedPiece);
+                _pieces.Remove(capturedPiece);
             }
+
+            Board.PutPiece(piece, destiny);
+
+            return capturedPiece;
+        }
+
+        private void UndoTheMove(Position origin, Position destiny, Piece capturedPiece)
+        {
+            Piece currentPiece = Board.RemovePiece(destiny);
+            currentPiece.RemoveMovement();
+            if (capturedPiece != null)
+            {
+                Board.PutPiece(capturedPiece, destiny);
+                _capturedPieces.Remove(capturedPiece);
+                _pieces.Add(capturedPiece);
+            }
+            Board.PutPiece(currentPiece, origin);
         }
 
         private void ChangePlayer()
@@ -98,20 +166,20 @@ namespace Section12_Chess.ChessGame
         {
             PutNewPiece(new Tower(Board, Color.Black), 'a', 8);
             PutNewPiece(new Tower(Board, Color.Black), 'h', 8);
-            PutNewPiece(new Knight(Board, Color.Black),'b', 8);
-            PutNewPiece(new Knight(Board, Color.Black),'g', 8);
-            PutNewPiece(new Bishop(Board, Color.Black),'c', 8);
-            PutNewPiece(new Bishop(Board, Color.Black),'f', 8);
-            PutNewPiece(new Queen(Board, Color.Black), 'd', 8);
+            //PutNewPiece(new Knight(Board, Color.Black),'b', 8);
+            //PutNewPiece(new Knight(Board, Color.Black),'g', 8);
+            //PutNewPiece(new Bishop(Board, Color.Black),'c', 8);
+            //PutNewPiece(new Bishop(Board, Color.Black),'f', 8);
+            //PutNewPiece(new Queen(Board, Color.Black), 'd', 8);
             PutNewPiece(new King(Board, Color.Black), 'e', 8);
 
             PutNewPiece(new Tower(Board, Color.White), 'a', 1);
             PutNewPiece(new Tower(Board, Color.White), 'h', 1);
-            PutNewPiece(new Knight(Board, Color.White),'b', 1);
-            PutNewPiece(new Knight(Board, Color.White),'g', 1);
-            PutNewPiece(new Bishop(Board, Color.White),'c', 1);
-            PutNewPiece(new Bishop(Board, Color.White),'f', 1);
-            PutNewPiece(new Queen(Board, Color.White), 'e', 1);
+            //PutNewPiece(new Knight(Board, Color.White),'b', 1);
+            //PutNewPiece(new Knight(Board, Color.White),'g', 1);
+            //PutNewPiece(new Bishop(Board, Color.White),'c', 1);
+            //PutNewPiece(new Bishop(Board, Color.White),'f', 1);
+            //PutNewPiece(new Queen(Board, Color.White), 'e', 1);
             PutNewPiece(new King(Board, Color.White), 'd', 1);
         }
     }
