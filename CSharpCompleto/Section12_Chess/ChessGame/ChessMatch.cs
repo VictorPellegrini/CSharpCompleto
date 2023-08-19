@@ -2,8 +2,6 @@
 using Section12_Chess.Pieces;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Reflection.PortableExecutable;
 
 namespace Section12_Chess.ChessGame
 {
@@ -29,6 +27,41 @@ namespace Section12_Chess.ChessGame
             PutPieces();
         }
 
+        public bool isCheckmate(Color color)
+        {
+            if (!IsKingInCheck(color))
+            {
+                return false;
+            }
+
+            foreach (Piece piece in GetSurvivingPieces(color))
+            {
+                bool[,] possibleMoviments = piece.PossibleMovements();
+
+                for (int i = 0; i < Board.Rows; i++)
+                {
+                    for (int j = 0; j < Board.Columns; j++)
+                    {
+                        if (possibleMoviments[i, j])
+                        {
+                            Position origin = piece.Position;
+                            Position destiny = new Position(i, j);
+
+                            Piece capturedPiece = MovePiece(origin, destiny);
+                            bool isCheck = IsKingInCheck(color);
+                            UndoTheMove(origin, destiny, capturedPiece);
+
+                            if (!isCheck)
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
         public void PerformsTheMove(Position origin, Position destiny)
         {
             Piece pecaCapturada = MovePiece(origin, destiny);
@@ -48,8 +81,15 @@ namespace Section12_Chess.ChessGame
                 Check = false;
             }
 
-            Round++;
-            ChangePlayer();
+            if (isCheckmate(GetAgainstPlayer(CurrentPlayer)))
+            {
+                Finished = true;
+            }
+            else
+            {
+                Round++;
+                ChangePlayer();
+            }
         }
 
         public void ValidateOriginPosition(Position origin)
@@ -97,7 +137,7 @@ namespace Section12_Chess.ChessGame
         public bool IsKingInCheck(Color color)
         {
             Piece king = GetKing(color);
-            
+
             if (king == null)
             {
                 throw new BoardExceptions("The King " + color + " is already dead!");
